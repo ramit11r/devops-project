@@ -1,0 +1,175 @@
+:root {
+  color: #f5f0e8;
+  background: radial-gradient(circle at top, #234038 0%, #101917 55%, #090d0c 100%);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.hero-card,
+.panel {
+  border: 1px solid rgba(241, 230, 212, 0.18);
+  background: rgba(10, 16, 15, 0.72);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.hero-card {
+  padding: 2.5rem;
+  border-radius: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.72rem;
+  color: #d0ba91;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 10ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  line-height: 0.94;
+}
+
+.lead {
+  max-width: 60ch;
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e2d7c3;
+}
+
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.status-row span,
+.task-status {
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(208, 186, 145, 0.12);
+  border: 1px solid rgba(208, 186, 145, 0.25);
+  color: #f4e8ce;
+  font-size: 0.9rem;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.panel {
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.stack-list,
+.task-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-item,
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(244, 232, 206, 0.05);
+  border: 1px solid rgba(244, 232, 206, 0.12);
+}
+
+.stack-item span,
+.task-area {
+  color: #d0ba91;
+  text-transform: capitalize;
+}
+
+.stack-item strong,
+.task-card h3 {
+  max-width: 24ch;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: right;
+  color: #f5f0e8;
+}
+
+.task-card {
+  align-items: center;
+}
+
+.task-card h3 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.task-area {
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.error-message {
+  color: #f6a6a6;
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    width: min(100% - 1rem, 1120px);
+    padding: 1rem 0 2rem;
+  }
+
+  .hero-card,
+  .panel {
+    border-radius: 20px;
+    padding: 1.25rem;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-item,
+  .task-card {
+    flex-direction: column;
+  }
+
+  .stack-item strong {
+    max-width: none;
+    text-align: left;
+  }
+}
